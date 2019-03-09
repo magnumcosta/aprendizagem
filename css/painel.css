@@ -1,0 +1,74 @@
+header {
+    width: 100%; /* Largura */
+    height: 155px; /* Altura */
+    background-color: #dfe4ea;
+    text-align: center;
+}
+header .navadmin {
+    position: relative;
+    margin: auto;
+    top: auto;
+}
+.nav {
+    background-color: #dfe6ea;
+    height: 25px;
+    color: black;
+    text-align: right;
+}
+.nav-bar ul{
+    list-style: none;    
+    text-align: right;
+}
+.nav-bar li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+.titulo-painel {
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    opacity: 55%;
+}
+.titulo-painel h3 {
+    font-size: 30px;
+    color: black;
+}
+.navegador ul {
+    list-style: none;
+    padding-left: 0;
+    height: 50px;
+}
+.sub-list ul{
+    height: 10px;
+}
+.navegador 	li {
+    display: inline-block; 
+    line-height: 30px;
+    padding-left: 30px;
+    padding-right: 30px;	 
+}
+.form_create h3 {	
+    font-size: 50px;
+    margin-top: 30px;
+    padding: 0px;
+}
+.form-control {
+    width: 100%
+}
+#painel {
+    position: relative;
+    margin-bottom: 15px;
+}
+footer {
+    margin-top: -1px;
+    height: 139px;
+    background-color: #dfe4ea;
+}
+.rodape {
+    text-align: center;
+}
+#sing{
+    height: 80px;
+    line-height: 40px;
+}
