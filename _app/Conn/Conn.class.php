@@ -23,7 +23,14 @@ class Conn {
         private static function Conectar() {
         try {
             if (self::$Connect == null):
-                $dsn = 'mysql:host=' . self::$Host . ';dbname=' . self::$Dbsa;
+                $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+                if ($hostname = 'magnum-mate-3450'):
+                    $dsn = 'mysql:host=' . 'mysql' . ';dbname=' . self::$Dbsa;
+                else:
+                    $dsn = 'mysql:host=' . self::$Host . ';dbname=' . self::$Dbsa;
+                endif;
+
+                //$dsn = 'mysql:host=' . self::$Host . ';dbname=' . self::$Dbsa;
                 $options = [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8'];
                 self::$Connect = new PDO($dsn, self::$User, self::$Pass, $options);
             endif;

@@ -5,7 +5,7 @@
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', 'poderos1982');
-define('DBSA', 'wsphp');
+define('DBSA', 'wsphp');    
 
 //  Auto load de classes ####################
 

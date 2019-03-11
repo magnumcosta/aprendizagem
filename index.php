@@ -20,14 +20,12 @@ require './_app/Config.inc.php';
         </div>
         
         <div class="alerta-sistema">
-            <?php // procedimento responsável em executar o acesso ao painel ou recusá-lo  caso o este acesso seja restrito
-
-            $sessao = new sessao(3); //classe que auxilia a iniciar o acesso ao sistema
-
+            <?php // procedimento responsável em executar o acesso ao painel ou recusá-lo  caso o este acesso seja restrito           
+            $sessao = new sessao(3); //classe que auxilia a iniciar o acesso ao sistema            
             if ($sessao->CheckLogin()):
                 header('location:painel.php'); 
             endif;
-
+            
             $datalogin = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 
             if ($datalogin['AdminLogin']):                            
@@ -56,7 +54,7 @@ require './_app/Config.inc.php';
         
          <div class="formulario">
 
-             
+
                 <form class="form-signin" action="" method="post">
                     <!--textbox E-mail-->
 
