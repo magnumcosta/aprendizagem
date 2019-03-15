@@ -5,10 +5,12 @@
         <?PHP
         $empty = filter_input(INPUT_GET, 'empty', FILTER_VALIDATE_BOOLEAN);
         if ($empty):
-            MGErro("Você tentou remover ou editar um registro inexistente.", MG_ERROR);
+            MGErro("Você tentou, sem sucesso, remover ou editar um registro inexistente.", MG_ERROR);
         endif;
         ?>
-        <?php for ($i = 1; $i <= 3; $i++): ?>
+        <?php 
+
+        ?>
             <section>
                 <header>
                     <h1>Vídeo aulas:  <span>( 21 posts ) ( 3 Categorias )</span></h1>
@@ -24,7 +26,9 @@
 
                 <h2>Sub categorias de vídeo aulas:</h2>
 
-                <?php for ($a = 1; $a <= 3; $a++): ?>
+                <?php 
+                    $a = 1;
+                ?>
                     <article<?php if ($a % 3 == 0) echo ' class="right"'; ?>>
                         <h1><a target="_blank" href="../categoria/uri-da-categoria" title="Ver Categoria">Programação com PHP:</a>  ( 7 posts )</h1>
 
@@ -35,10 +39,10 @@
                             <li><a class="act_delete" href="painel.php?exe=posts/post&id=ID_DO_POST" title="Excluir">Deletar</a></li>
                         </ul>
                     </article>
-                <?php endfor; ?>
+                <?php  ?>
 
             </section>
-        <?php endfor; ?>
+        <?php  ?>
 
         <div class="clear"></div>
     </section>

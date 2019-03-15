@@ -25,6 +25,8 @@ require './_app/Config.inc.php';
             if ($sessao->CheckLogin()):
                 header('location:painel.php'); 
             endif;
+            $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+            var_dump($hostname);
             
             $datalogin = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 

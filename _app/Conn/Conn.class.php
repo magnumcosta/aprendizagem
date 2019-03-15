@@ -22,12 +22,13 @@ class Conn {
      */
         private static function Conectar() {
         try {
+            
             if (self::$Connect == null):
                 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-                if ($hostname = 'magnum-mate-3450'):
-                    $dsn = 'mysql:host=' . 'mysql' . ';dbname=' . self::$Dbsa;
-                else:
+                if ($hostname != 'magnum-mate-3450'):
                     $dsn = 'mysql:host=' . self::$Host . ';dbname=' . self::$Dbsa;
+                else:                   
+                    $dsn = 'mysql:host=' . 'mysql' . ';dbname=' . self::$Dbsa;
                 endif;
 
                 //$dsn = 'mysql:host=' . self::$Host . ';dbname=' . self::$Dbsa;
