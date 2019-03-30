@@ -25,7 +25,8 @@ endif;
         <title>MAGNUM PAINEL</title>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />  
-        <link rel="stylesheet" href="css/painel.css" />         
+        <link rel="stylesheet" href="css/painel.css" />
+        <link rel="stylesheet" href="css/categories.css" />         
     </head>
     
     <body class="painel">
@@ -39,23 +40,22 @@ endif;
         <header class="navadmin">            
             
             <div class="nav">
-                <ul class="nav-bar">
+                <ul>
                     <li class="username">Olá, <?= $userLogin['user_name'];?><?= $userLogin['user_lastname'];?> ! </li>
                     <li><a href="painel.php?logoff=true">sair</a></li>                    
                 </ul>
-            </div>
+            </div>            
             
-            <div class="titulo-painel">
-            <h1><b>PAINEL DE CONTROLE</b></h1>
-            </div>
-            <ul class="navegador">
-                <li>Categorias</a> 
+            <h2>PAINEL DE CONTROLE</h2>
+            
+            <ul class="navigation">
+                <li></a> 
                     <ul class="sub-list">
                         <li><a href="painel.php?exe=categories/create">Criar Categoria</a></li>
                         <li><a href="painel.php?exe=categories/update">Editar Categorias</a></li>
                     </ul>
                 </li>                
-                <li >Posts</a>
+                <li ></a>
                     <ul class="sub-list">
                         <li><a href="painel.php?exe=posts/create">Criar Post</a></li>
                         <li><a href="painel.php?exe=posts/index">Editar Posts</a></li>

@@ -5,10 +5,8 @@ if (!class_exists('sessao')):
 endif;
 ?> 
 
-<div class="container form_create">  
-
-    <h3>Criar Categoria:</h3>
-    
+<div class="form_create">  
+    <h2>Criar Categoria:</h2>    
     <?php
     $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
     $catid = filter_input(INPUT_GET,'catId',FILTER_VALIDATE_INT);
@@ -24,30 +22,30 @@ endif;
         endif;
     endif;
     ?>
-    <form class="form-group" name="PostForm" id="PostForm" action="" method="post" enctype="multipart/form-data">
-        <!-- Label/Rotulo value: títulos txt -->
-        <label class="label">
-            <span class="field">Titulo:</span>
-            <input class="form-control" resize="none" type="text" name="category_title" value="<?php if (isset($data)) echo $data['category_title']; ?>" />
-        </label><br><br>
+    <form class="form-group mb-3" name="PostForm" id="PostForm" action="" method="post" enctype="multipart/form-data">
 
+        <!-- Label/Rotulo value: títulos txt -->
+        <div>            
+                <span class="field">Titulo:</span>
+                <input class="form-control" resize="none" type="text" name="category_title" value="<?php if (isset($data)) echo $data['category_title']; ?>" />            
+        </div>
         <!-- Label/Rotulo value: Conteúdo txt -->
-        <label class="label">
-            <span class="field">Conteúdo:</span><br>
-            <textarea class="form-control" name="category_content" rows="5"><?php if (isset($data)) echo $data['category_content']; ?></textarea>
-        </label><br>
+        <div>            
+            <span class="field">Conteúdo:</span>
+            <textarea class="form-control" name="category_content" rows="3"><?php if (isset($data)) echo $data['category_content']; ?></textarea>          
+        </div>
         <!-- Label/Rotulo value: Data.date e Seção.listaDeCampos.banco -->
         <div class="label_line">
 
-            <label class="label_small"><br>
-                <span class="field">Data:</span><br>
+            <label class="label_small">
+                <span class="field">Data:</span>
                 <input type="text" class="form-data form-control" name="category_date" value="<?php date('d/m/Y H:i:s'); ?>" />
-            </label><br>
+            </label>
 
-            <label class="label_small left"><br>
-                <span class="field">Sessão:</span><br>
+            <label class="label_small left">
+                <span class="field">Sessão:</span>
 
-                <select name="category_parent" ><br>
+                <select name="category_parent" >
                     <option value='null'> Selecione a Sessão: </option>
                     <?php
                     $readses = new Leitura;
@@ -66,10 +64,9 @@ endif;
                     ?>
                 </select>
 
-            </label><br><br>
+            </label>
         </div>
 
-        <div class="gbform"></div>
-        <input type="submit" class="btn btn-sm btn-primary" value="Criar Categoria" name="SendPostForm" />  
-
+        <div class="gbform">
+        <input type="submit" class="btn btn-sm btn-primary" value="Criar Categoria" name="SendPostForm" />
 </div>

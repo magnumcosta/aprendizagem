@@ -1,0 +1,21 @@
+.form_create{	
+    
+    width: 800px;
+	margin: auto;
+	margin-top: 200px;
+    margin: auto;
+    padding: 0px;
+    position: relative;
+}
+form .form-goup {
+	
+}
+.form-control {
+    width: 100%
+    margin: auto;
+}
+
+
+.form-group {
+	line-height: 15px;
+} 
